@@ -28,14 +28,26 @@ console.log(addBook(newBook));
 
 /* Task 4 */
 function bookByAuthor(){
-  
+  var n = library.length;
+  var temp;
+  for (var i = 0; i <= n-1; i++) {
+  	for (var j = 0; j <= n-1; j++) {
+  		if (library[i].author < library[j].author) {
+  			temp = library[i];
+  			library[i] = library[j];
+  			library[j] = temp;
+  		}
+  	}
+  }
+  return library;
 }
 
 console.log(bookByAuthor());
 
 /* Task 5 */
 function findByTitle( title ){
-  //add code
+  var x;
+  
 }
 
 console.log(findByTitle("man"));
