@@ -46,7 +46,16 @@ console.log(bookByAuthor());
 
 /* Task 5 */
 function findByTitle( title ){
-  var x;
+  var a = [];
+  for (var i = 0; i < library.length; i++) {
+
+      searchTitle = library[i].title.toLowerCase().includes(title);
+      if(searchTitle == 1){
+        a.push(library[i]);
+      }
+    }
+  console.log("Searched Titles: ");
+return a;
   
 }
 
